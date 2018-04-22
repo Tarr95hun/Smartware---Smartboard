@@ -1,93 +1,116 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>SmartBoard - Tarr Lorant</title>
-    </head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="public/css/style.css" type="text/css" />
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="public/js/script.js" type="text/javascript"></script>
-    <body>
-        <header>
-            <div class="logo">
-                <img src="public/img/logo.png" />
-            </div>
-            <div class="menu">
-                <a href="#" class="selected">My Dashboard</a>
-                <a href="#" >Statisics</a>
-            </div>
-        </header>
-        <div id="container">
-            <aside>
-                <div class="user">
-                    <img src="public/img/user.png" />
-                    <p id="current-user">Current user</p>
-                    <button id="NewUserBtn">Create new</button>
-                </div>
-                
-                <div class="aside-menu">
-                    <a href="#" class="selected">Dashboard</a></li>
-                    <a href="#">Widgets</a>
-                    <a href="#">Charts</a>
-                    <a href="#">Tables</a>
-                    <a href="#">Alerts</a>
-                </div>
-                <div class="login-logout">
-                    <a href="#">Login</a>
-                    <span>/</span>
-                    <a href="#">Logout</a>
-                </div>
-                
-            </aside>
-            <main>
-                <div class="center-content">
-                    <div class="inbox">
-                        <div class="inbox-header">
-                            <img src="public/img/chat.png" />
-                            <span>Inbox</span>
-                        </div>
-                        <div class="inbox-text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo...
-                            </p>
-                            <a href="#">Read more</a>
-                        </div>
-                    </div>
-                    <div class="products">
-                        <div class="new-product prodbox">
-                            <img class="prodimg" src="public/img/prglpt.png" />
-                            <a href="#">New Product</a>
-                        </div>
-                        <div class="copy-product prodbox">
-                            <img class="prodimg" src="public/img/prglng.png" />
-                            <a href="#">Copy of New Product</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="right-content">
-                    <div id="info-box">
-                        <div class="comments">
-                            <img class="comment-img" src="public/img/comment.png" />
-                            <div class="comment-txt">
-                                <b class="comment-ct">50</b>
-                                <p>Comments</p>
-                            </div>
-                        </div>
-                        <div class="views">
-                            <div class="view-txt">
-                                <img class="view-img" src="public/img/view.png" />
-                                <div class="view-txt">
-                                    <b class="view-ct">26.4k</b>
-                                    <p>Views</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="chart"></div>
-                </div>
-            </main>
+
+<head>
+  <title>SmartBoard - Tarr Lorant</title>
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="public/css/dashboard.css" type="text/css" />
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="public/js/script.js" type="text/javascript"></script>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="public/img/logo.png" />
+    </div>
+    <div class="menu">
+      <a href="#" class="asd selected">My Dashboard</a>
+      <a href="#" class="asd">Statisics</a>
+    </div>
+    <div class="header-button">
+      <a href="#"><img src="public/img/header-button.png" /></a>
+      <div class="clear"></div>
+    </div>
+  </header>
+  <div id="container">
+    <aside>
+      <div class="user">
+        <img src="public/img/user.png" />
+        <span id="current-user">Current user</span>
+        <button id="NewUserBtn">Create new</button>
+      </div>
+      <div class="aside-menu">
+        <a href="#" class="selected">Dashboard</a></li>
+        <a href="#">Widgets</a>
+        <a href="#">Charts</a>
+        <a href="#">Tables</a>
+        <a href="#">Alerts</a>
+      </div>
+      <div class="login-logout">
+        <a href="#">Login</a>
+        <span>/</span>
+        <a href="#">Logout</a>
+      </div>
+    </aside>
+    <main>
+      <div class="left-content">
+        <div class="square1">
+          <div class="inbox-header">
+            <img src="public/img/chat.png" />
+            <span>Inbox</span>
+          </div>
+          <div class="inbox-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo...
+            </p>
+            <p><a href="#">Read more</a>
+              <p>
+          </div>
         </div>
-    </body>    
+        <div class="square2">
+          <div class="new-product prodbox">
+            <img class="prodimg" src="public/img/prglpt.png" />
+            <a href="#">New Product</a>
+          </div>
+          <div class="copy-product prodbox">
+            <img class="prodimg" src="public/img/prglng.png" />
+            <a href="#">Copy of New Product</a>
+          </div>
+        </div>
+      </div>
+      <div class="right-content">
+        <div class="square3">
+          <div class="square3-1">
+            <img class="comment-img" src="public/img/comment.png" />
+            <div class="comment-txt">
+              <b class="comment-ct">50</b>
+              <p>Comments</p>
+            </div>
+          </div>
+          <div class="square3-2">
+            <div class="view-txt">
+              <img class="view-img" src="public/img/view.png" />
+              <div class="view-txt">
+                <b class="view-ct">26.4k</b>
+                <p>Views</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="chart"></div>
+    </main>
+    </div>
+    <!--<div class="popin-container">
+      <div class="popin">
+        <div class="popin-x">X</div>
+        <div>
+          <div class="popin-top">
+
+          </div>
+          <div class="popin-content">
+            <div class="control-row">
+              <div class="info">
+                saddasdasdasddsasda/sadaads//asdsaasd
+              </div>
+              <div class="edit">
+                <a href="/edit-popin.html">A\a</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>-->
+</body>
+
 </html>

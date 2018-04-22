@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+h1 {
+  font-size: 32px;
+  color: #000;
+  margin-bottom: 54px;
+}
+.signup,
+.login {
+  text-align: center;
+}
+  .signup a:link {
+    font-size: 14px;
+    color: #364fc7;
+    text-align: center;
+  }
+  .login-signup {
+    font-size: 14px;
+    color: #364fc7;
+    text-align: center;
+  }
+  .login-forgot {
+    color: #868e96;
+    text-decoration: underline;
+  }
+form button, form input {
+  width: 296px;
+  height: 47px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+  form button[name=create-account-btn] {
+    margin-top: 45px;
+    margin-bottom: 49px;
+    background-color: #364fc7;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  form input {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 7px;
+  }
+  form input[type=text] {
+    font-size: 16px;
+    padding-left: 15px;
+  }
+
+  form input[name=email] {
+    margin-bottom: 26px;
+
+  }
+  form ::placeholder{
+    color: #ced4da;
+    font-size: 16px;
+  }

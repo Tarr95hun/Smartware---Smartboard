@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: #f0f2f4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  height: 63px;
+  color: #343a40;
+  background-color: #fff;
+  padding: 0 41px;
+}
+
+  header .logo {
+    display: inline-block;
+    min-width: 208px;
+    padding-top: 13px;
+    vertical-align: top;
+    min-height: 63px;
+  }
+
+  header .menu {
+    display: inline-block;
+  }
+
+  header .menu a {
+    padding: 21px 18px 0 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #354e66;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    height: 63px;
+  }
+
+  header .menu a.selected, header .menu a:hover {
+    border-bottom: 2px solid #354a40;
+  }
+
+  header .header-button img {
+    width: 26px;
+    height: 22px;
+  }
+
+  header .header-button {
+    display: inline-block;
+    float: right;
+    padding-top: 22px;
+    display: none;
+  }
+
+  header .clear {
+    clear: both;
+  }
+
+#container {
+  display: flex;
+}
+#chart {
+  cursor: pointer;
+}
+
+aside {
+  display: inline-block;
+  min-width: 249px;
+  background-color: #354e66;
+  color: #90abc0;
+}
+
+  aside .user {
+    padding-top: 36px;
+    padding-bottom: 38px;
+    font-size: 16px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  aside .user img {
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    background-color: #c4ccdf;
+  }
+
+  aside .user span {
+    display: block;
+    font-size: 16px;
+    padding: 18px 0 18px 0;
+  }
+
+  aside .user button {
+    width: 166px;
+    height: 42px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    background-color: #fff;
+    color: #354e66;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  aside .aside-menu a {
+    display: block;
+    padding: 14px 0 14px 34px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #90abc0;
+  }
+
+  aside .aside-menu a:hover, aside .aside-menu a.selected {
+    background-color: #3f576e;
+    border-left: 1px solid #fff;
+    color: #fff;
+  }
+
+  aside .login-logout {
+    padding: 14px 0 36px 34px;
+    margin-top: 100%;
+  }
+
+  aside .login-logout a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #90abc0;
+    margin-top: auto;
+  }
+
+  aside .login-logout a:hover {
+    color: #fff;
+  }
+
+main {
+  margin: 38px 0 0 58px;
+  display: flex;
+}
+
+  main .square1 {
+    background-color: #fff;
+    width: 523px;
+    height: 180px;
+    margin-bottom: 41px;
+  }
+
+  main .square2 {
+    width: 523px;
+    height: 283px;
+    display: flex;
+  }
+
+  main .square3 {
+    display: flex;
+    height: 92px;
+    margin-bottom: 42px;
+  }
+
+  main .square3-1 {
+    width: 242px;
+    height: 92px;
+    background-color: #fff;
+  }
+
+  main .square3-2 {
+    width: 242px;
+    height: 92px;
+    background-color: #fff;
+    margin-left: 38px;
+  }
+
+  main .square4 {
+    background-color: pink;
+    width: 519px;
+    height: 400px;
+  }
+
+  main .left-content {
+    margin-right: 42px;
+  }
+
+  main .inbox {
+    background-color: #fff;
+    width: 522px;
+    height: 181px;
+  }
+
+  main .inbox-text {
+    padding: 5px 30px 20px 30px;
+    line-height: 1.4s;
+    height: 130;
+  }
+
+  main .inbox a {
+    text-decoration: none;
+    margin-bottom: 15px;
+  }
+
+  main .inbox-header {
+    height: 46px;
+    background-color: #f8f9fa;
+    vertical-align: middle;
+    color: #343a40;
+  }
+
+  main .inbox-header img {
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+    vertical-align: middle;
+  }
+
+  main .prodbox {
+    width: 240px;
+    height: 280px;
+    cursor: pointer;
+  }
+
+  main .new-product {
+    margin-right: 42px;
+  }
+
+  main .prodimg {
+    width: 240px;
+    height: 230px;
+    display: block;
+  }
+
+  main .prodbox a {
+    display: block;
+    height: 50px;
+    width: 240px;
+    background-color: #fff;
+    text-decoration: none;
+    padding-left: 22px;
+    padding-top: 16px;
+    color: #343a40;
+  }
+
+  main .views {
+    margin-left: 40px;
+  }
+
+  main .comment-img {
+    width: 96px;
+    height: 91px;
+    background-color: #9775fa;
+  }
+
+  main .view-img {
+    width: 96px;
+    height: 91px;
+    background-color: #20c997;
+    background-image: url("../img/view.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  main .comment-txt, .view-txt {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  main .comment-ct, .view-ct {
+    font-size: 36px;
+    margin-left: 25px;
+    position: relative;
+    top: 15px;
+    display: inline-block;
+  }
+
+  main .comment-txt p, .view-txt p {
+    font-size: 16px;
+    padding-left: 25px;
+    color: #727c85;
+  }
+
+  .popin-container {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+  }
+
+  .popin {
+    max-width: 769px;
+    width: 100%;
+    background-color: white;
+    margin: 82px auto 0 auto;
+    border-radius: 4px;
+    position: relative;
+  }
+
+  .popin-x {
+    width: 10px;
+    height: 10px;
+    background-color: #f00;
+    position: absolute;
+    right: -35px;
+    top: -35px;
+  }
+
+  .popin-top {
+    background-image: url("public/img/prlglng.PNG");
+    height: 260px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .control-row {
+    padding: 31px 0 0 0;
+  }
+
+  .info {
+    float: left;
+    color: black;
+  }
+
+  .edit {
+    float: right;
+  }
+
+  .popin-content {
+    width: 100%;
+    clear: both;
+    display: inline-block;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    main {
+      display: block;
+      margin: 38px 0 0 58px;
+    }
+    main .right-content .square3 {
+      margin-top: 39px;
+    }
+  }
+
+
+  @media only screen and (max-width: 768px) {
+    header .header-button {
+      display: block;
+    }
+    header .menu {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 520px) {
+    aside {
+      display: none;
+    }
+  }
