@@ -20,6 +20,9 @@ header {
   color: #343a40;
   background-color: #fff;
   padding: 0 41px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 }
 
   header .logo {
@@ -67,6 +70,7 @@ header {
 
 #container {
   display: flex;
+  padding-top: 63px;
 }
 #chart {
   cursor: pointer;
@@ -305,32 +309,54 @@ main {
 
   .popin-x {
     width: 10px;
-    height: 10px;
-    background-color: #f00;
+    height: 8px;
     position: absolute;
     right: -35px;
     top: -35px;
+    color: #fff;
+    float: right;
+    font-size: 21px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .popin-x:hover {
+    color: #000;
   }
 
   .popin-top {
-    background-image: url("public/img/prlglng.PNG");
+    background-image: url("public/img/popinlpt.png");
     height: 260px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
   }
+  .popin-top img {
+    width: 100%;
+  }
 
   .control-row {
-    padding: 31px 0 0 0;
+    padding: 31px 74px 48px 74px;
+  }
+  .control-row .popin-title p{
+    font-size: 32px;
+  }
+  .control-row .popin-txt p{
+    font-size: 14px;
   }
 
   .info {
     float: left;
-    color: black;
+    color: #354e66;
+    font-size: 14px;
   }
 
   .edit {
     float: right;
+
+  }
+
+  .edit a {
+    color: #364fc7;
   }
 
   .popin-content {
@@ -346,6 +372,9 @@ main {
     }
     main .right-content .square3 {
       margin-top: 39px;
+    }
+    aside .login-logout {
+      margin-top: 233%;
     }
   }
 
