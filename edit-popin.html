@@ -93,7 +93,7 @@
     </div>
     <div class="popin-container">
       <div class="popin">
-        <div class="popin-x">X</div>
+        <div class="popin-x" onclick="quitFuncion();">X</div>
         <div>
           <div class="popin-top">
             <img src="public/img/popinlpt.png">
@@ -103,38 +103,19 @@
               <div class="info">
                 CATEGORIE / BY ADMIN / 05.11.2016
               </div>
-              <div class="edit">
-                <a href="edit-popin.html" onclick="getParagraphEditableTitle();">Edit</a>
-              </div>
-              <div class="popin-title">
-                <?php
-                  if(isset($_REQUEST['edit-btn-save'])) {
-                    echo "<p>".$_REQUEST['popin-title-textarea']."</p>";
-                  } else {
-                    echo "<p>Un articol despre IT-isti</p>";
-                  }
-                ?>
+              <form name="popin-form" action="popin.html" method="post">
+                <div class="edit">
+                  <input type="submit" class="edit-btn-save" name="edit-btn-save" value="Save" />
+                </div>
+                <div class="popin-title">
+                    <textarea name="popin-title-textarea"></textarea>
+                </div>
+                <div class="popin-txt">
+                    <textarea rows="4" cols="50" style="height:350px;" name="popin-txt-textarea">
 
-              </div>
-              <div class="popin-txt">
-                <?php
-                  if(isset($_REQUEST['edit-btn-save'])) {
-                    echo "<p>".$_REQUEST['popin-txt-textarea']."</p>";
-                  } else {
-                    echo "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu tristique odio. Donec nisl lectus, varius quis dignissim id,
-                 finibus sit amet libero. Fusce sed dignissim risus. Proin mattis luctus velit quis molestie. Quisque varius cursus ligula.
-                 Sed blandit est in mi auctor, sit amet interdum velit tincidunt. Fusce nec erat sit amet erat fermentum egestas.
-                 Proin ipsum libero, euismod vitae facilisis vel, efficitur sit amet tellus. Nunc nibh nulla, consequat ut quam et,
-                 ultricies bibendum nunc.</p>";
-                    echo "<p>Ut sapien elit, condimentum a dapibus sit amet, commodo sed risus. Nulla sagittis aliquet pellentesque.
-                 Praesent vel arcu vitae elit fermentum rhoncus non congue mauris. Suspendisse nec commodo metus, sed volutpat mi.
-                 Curabitur interdum lobortis neque, vel mattis libero dignissim eget.</p>";
-                    echo "<p>Sed luctus, est sit amet tempor interdum, augue elit tincidunt est, eu eleifend erat mauris in nunc.
-                 In nisl turpis, pharetra sed ligula eget, aliquet consectetur nunc. Nunc id tellus vitae leo iaculis auctor non sit amet felis.
-                 Sed aliquet lobortis ligula.</p>";
-                  }
-                ?>
-              </div>
+                    </textarea>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -142,3 +123,4 @@
     </div>
 </body>
 </html>
+
