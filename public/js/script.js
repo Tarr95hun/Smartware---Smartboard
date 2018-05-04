@@ -22,6 +22,10 @@ function drawChart() {
 }
 // Load google charts - end
 
+var popinWindow = function() {
+  document.getElementsByTagName("html")[0].style.overflow = "hidden";
+}
+
 var getParagraphEditableTitle = function() {
     var paragraph = document.getElementsByClassName("popin-txt")[0].children;
     var txt = "";
@@ -32,4 +36,8 @@ var getParagraphEditableTitle = function() {
     //document.getElementsByName('popin-txt-textarea')[0].appendChild(txt);
     var x = document.getElementsByClassName("popin-title-textarea");
     console.log(x);
+}
+
+var  quitFunction = function() {
+  alert("sasda");
 }

@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="stylesheet" href="public/css/dashboard.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/popin.css" type="text/css" />
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script src="public/js/script.js" type="text/javascript"></script>
 
@@ -39,14 +40,16 @@
         <a href="#">Alerts</a>
       </div>
       <div class="login-logout">
-        <a href="#">Login</a>
-        <span>/</span>
-        <a href="#">Logout</a>
+        <div class='inl'>
+          <a href="login.html">Login</a>
+          <span>/</span>
+          <a href="#">Logout</a>
+        </div>    
       </div>
     </aside>
     <main>
       <div class="left-content">
-        <div class="square1">
+       <div class="square1">
           <div class="inbox-header">
             <img src="public/img/chat.png" />
             <span>Inbox</span>
@@ -60,11 +63,11 @@
         </div>
         <div class="square2">
           <div class="new-product prodbox">
-            <img class="prodimg" src="public/img/prglpt.png" />
-            <a href="#">New Product</a>
+            <img class="prodimg" src="public/img/prglpt.PNG" />
+            <a href="popin.php">New Product</a>
           </div>
           <div class="copy-product prodbox">
-            <img class="prodimg" src="public/img/prglng.png" />
+            <img class="prodimg" src="public/img/prglng.PNG" />
             <a href="#">Copy of New Product</a>
           </div>
         </div>
@@ -91,12 +94,11 @@
         <div id="chart"></div>
     </main>
     </div>
-    <div class="popin-container">
+  <div class="popin-container">
       <div class="popin">
-        <div class="popin-x">X</div>
+        <a href="index.html" class="popin-x">X</a>
         <div>
           <div class="popin-top">
-            <img src="public/img/popinlpt.png">
           </div>
           <div class="popin-content">
             <div class="control-row">
@@ -104,7 +106,7 @@
                 CATEGORIE / BY ADMIN / 05.11.2016
               </div>
               <div class="edit">
-                <a href="edit-popin.html" onclick="getParagraphEditableTitle();">Edit</a>
+                <a href="edit-popin.html" onclick="popinWindow();">Edit</a>
               </div>
               <div class="popin-title">
                 <?php
@@ -114,7 +116,7 @@
                     echo "<p>Un articol despre IT-isti</p>";
                   }
                 ?>
-
+                
               </div>
               <div class="popin-txt">
                 <?php
@@ -141,4 +143,5 @@
       </div>
     </div>
 </body>
+
 </html>

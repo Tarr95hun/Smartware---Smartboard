@@ -2,6 +2,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  overflow: auto;
 }
 
 body {
@@ -9,6 +10,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   background-color: #f0f2f4;
+
 }
 
 * {
@@ -71,16 +73,21 @@ header {
 #container {
   display: flex;
   padding-top: 63px;
+
 }
 #chart {
   cursor: pointer;
 }
 
 aside {
-  display: inline-block;
-  min-width: 249px;
-  background-color: #354e66;
-  color: #90abc0;
+    min-width: 249px;
+    background-color: #354e66;
+    color: #90abc0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    height: 737px;
 }
 
   aside .user {
@@ -131,7 +138,11 @@ aside {
 
   aside .login-logout {
     padding: 14px 0 36px 34px;
-    margin-top: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-end;
+    flex-grow: 1;
   }
 
   aside .login-logout a {
@@ -144,28 +155,32 @@ aside {
   aside .login-logout a:hover {
     color: #fff;
   }
+aside .login-logout .inl {
+  display: inline-block;
+}
 
 main {
-  margin: 38px 0 0 58px;
+  padding: 38px 58px 0 58px;
   display: flex;
+  
 }
 
   main .square1 {
     background-color: #fff;
-    width: 523px;
-    height: 180px;
-    margin-bottom: 41px;
+    max-height: 180px;
+    padding-bottom: 41px;
   }
 
   main .square2 {
-    width: 523px;
-    height: 283px;
+    margin-top: 42px;
+    max-height: 283px;
     display: flex;
+    padding-bottom: 41px;
   }
 
   main .square3 {
     display: flex;
-    height: 92px;
+    max-height: 92px;
     margin-bottom: 42px;
   }
 
@@ -173,6 +188,7 @@ main {
     width: 242px;
     height: 92px;
     background-color: #fff;
+    flex-shrink: 0;
   }
 
   main .square3-2 {
@@ -180,21 +196,25 @@ main {
     height: 92px;
     background-color: #fff;
     margin-left: 38px;
+    flex-shrink: 0;
   }
 
   main .square4 {
     background-color: pink;
-    width: 519px;
-    height: 400px;
+    max-width: 519px;
+    max-height: 400px;
   }
 
-  main .left-content {
-    margin-right: 42px;
+  main .left-content, main .right-content {
+      max-width: 523px;
+      width: 100%;
+  }
+  main .left-content {  
+      margin-right: 45px;
   }
 
   main .inbox {
     background-color: #fff;
-    width: 522px;
     height: 181px;
   }
 
@@ -204,9 +224,12 @@ main {
     height: 130;
   }
 
-  main .inbox a {
+  main .inbox-text p > a {
     text-decoration: none;
     margin-bottom: 15px;
+    color: #364fc7;
+    font-size: 14px;
+    font-weight: bold;
   }
 
   main .inbox-header {
@@ -224,7 +247,8 @@ main {
   }
 
   main .prodbox {
-    width: 240px;
+    min-width: 240px;
+    width: 100%;
     height: 280px;
     cursor: pointer;
   }
@@ -234,7 +258,7 @@ main {
   }
 
   main .prodimg {
-    width: 240px;
+    width: 100%;
     height: 230px;
     display: block;
   }
@@ -242,17 +266,16 @@ main {
   main .prodbox a {
     display: block;
     height: 50px;
-    width: 240px;
     background-color: #fff;
     text-decoration: none;
     padding-left: 22px;
     padding-top: 16px;
     color: #343a40;
   }
-
-  main .views {
+ main .views {
     margin-left: 40px;
   }
+  
 
   main .comment-img {
     width: 96px;
@@ -276,126 +299,84 @@ main {
 
   main .comment-ct, .view-ct {
     font-size: 36px;
-    margin-left: 25px;
+    padding-left: 25px;
     position: relative;
     top: 15px;
     display: inline-block;
   }
-
-  main .comment-txt p, .view-txt p {
+main .comment-txt p {
+  font-size: 16px;
+    padding-left: 25px;
+    color: #9775fa;
+}
+  main .view-txt p {
     font-size: 16px;
     padding-left: 25px;
     color: #727c85;
   }
 
-  .popin-container {
-    z-index: 100;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgb(0, 0, 0, 0.7);
-    width: 100%;
-    height: 100%;
-    display: flex;
+@media only screen and (max-width: 1396px) {
+  aside {
+    height: unset;
   }
-
-  .popin {
-    max-width: 769px;
-    width: 100%;
-    background-color: white;
-    margin: 82px auto 0 auto;
-    border-radius: 4px;
-    position: relative;
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    main .left-content {
+        max-width: unset;
+        margin-right: 0;
+    }
+    main .right-content {
+        max-width: unset;
+    }
+    main .views {
+    margin-left: 0;
+        
   }
-
-  .popin-x {
-    width: 10px;
-    height: 8px;
-    position: absolute;
-    right: -35px;
-    top: -35px;
-    color: #fff;
-    float: right;
-    font-size: 21px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  .popin-x:hover {
-    color: #000;
-  }
-
-  .popin-top {
-    background-image: url("public/img/popinlpt.png");
-    height: 260px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-  }
-  .popin-top img {
-    width: 100%;
-  }
-
-  .control-row {
-    padding: 31px 74px 48px 74px;
-  }
-  .control-row .popin-title p{
-    font-size: 32px;
-  }
-  .control-row .popin-txt p{
-    font-size: 14px;
-  }
-
-  .info {
-    float: left;
-    color: #354e66;
-    font-size: 14px;
-  }
-
-  .edit {
-    float: right;
-
-  }
-
-  .edit a {
-    color: #364fc7;
-  }
-  .edit-btn-save {
-    width: 150px;
-    height: 35px;
-    background-color: #5dc87f;
-    border-radius: 4px;
-    color: white;
-    margin-bottom: 5px;
-    position: relative;
-    top: -10px;
-    cursor: pointer;
-  }
-
-  .popin-content {
-    width: 100%;
-    clear: both;
-    display: inline-block;
-  }
-
-  textarea {
-    width: 620px;
-    resize: none;
-    overflow-y: hidden;
-    border-radius: 5px;
-  }
-
+    main .square3 {
+        display: block;
+    }
+    main .square3-2 {
+        margin-left: 0;
+        width: 100%;
+    }
+    main .square3-1 {
+        width: 100%;
+        margin: 42px 0 42px 0;
+    }
+    #chart {
+        margin-top: 176px;
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+}
   @media only screen and (max-width: 1024px) {
     main {
       display: block;
       margin: 38px 0 0 58px;
+
     }
     main .right-content .square3 {
       margin-top: 39px;
     }
-    aside .login-logout {
-      margin-top: 233%;
-    }
+
   }
+@media only screen and (max-width: 877px) {
+  aside {
+    display: none;
+  }
+  main {
+    padding-left: initial;
+    display: flex;
+    justify-content: center;
+  }
+  main .left-content {
+    margin-right: 0;
+  } 
+}
 
 
   @media only screen and (max-width: 768px) {
@@ -405,10 +386,17 @@ main {
     header .menu {
       display: none;
     }
+
   }
 
   @media only screen and (max-width: 520px) {
     aside {
       display: none;
     }
+    main {
+      padding-left: initial;
+      display: flex;
+      justify-content: center;
+    }
+
   }

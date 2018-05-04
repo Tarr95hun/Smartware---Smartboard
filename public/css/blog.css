@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  height: 448px;
+  background: url('../img/blogimg.jpeg');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+a {
+  cursor: pointer;
+}
+.header .header-text {
+  text-align: center;
+  color: #fff;
+  max-width: 462px;
+}
+  .header-text h1 {
+    font-size: 42px;
+  }
+.blog-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 59px;
+  padding-left: 25px;
+  padding-right: 25px;
+  line-height: 1.6;
+
+}
+  .blog-content .articles {
+    max-width: 700px;
+  }
+  .blog-content .article {
+    margin-bottom: 84px;
+  }
+  .blog-content .search-box {
+    width: 200px;
+    flex-shrink: 0;
+    margin-left: 59px;
+  }
+  .blog-content .search-box h4,
+  .blog-content .search-box hr {
+    margin: 15px 0;
+  }
+  .blog-content .articles .article-zebre .article-img {
+    background: url(../img/zebra.jpg);
+    background-size: cover;
+    height: 300px;
+  }
+.blog-content .articles .article-foca .article-img {
+    background: url(../img/foca.jpg);
+    background-size: cover;
+    height: 300px;
+  }
+.blog-content .articles .article-giraff .article-img {
+    background: url(../img/giraff.jpg);
+    background-size: cover;
+    height: 300px;
+  }
+  .blog-content .info {
+    color: #b0b0b0;
+    font-size: 10px;
+    width: 100%;
+    padding-bottom: 50px;
+
+  }
+  .blog-content .article .paragraph {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .blog-content .comment .paragraph {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .blog-content .comment {
+    margin-bottom: 84px;
+  }
+  .blog-content .article .article-img {
+    background: url(../img/zebra.jpg);
+    background-size: cover;
+    height: 300px;
+    margin-bottom: 30px;
+  }
+  .blog-content .comment {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+  }
+  .blog-content .comment .comment-avatar {
+    background: url(../img/zebra.jpg);
+    background-size: cover;
+    height: 65px;
+    width: 65px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  .blog-content .comment .comment-txt h4 {
+    margin-bottom: 5px;
+  }
+  .blog-content form label {
+    font-weight: bold;
+    padding: 15px 0 15px 0;
+  }
+  .blog-content form input {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin: 15px 0;
+  }
+  .blog-content .comment-form input[name = comment-add] {
+    height: 198px;
+  }
+  .blog-content .comment-form input[name = comment-nume],
+  .blog-content .comment-form input[name = comment-email] {
+    height: 50px;
+  }
+  .blog-content form button {
+    height: 50px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    font-weight: bold;
+    margin-top: 15px;
+    border-radius: 2px;
+    cursor: pointer;
+  }
